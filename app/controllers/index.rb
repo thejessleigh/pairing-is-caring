@@ -12,7 +12,7 @@ get '/logout' do
 end
 
 get '/signup' do
-
+  erb :register
 end
 
 
@@ -20,8 +20,8 @@ end
 #==========================================POST
 
 post '/login' do
-
   @user = User.find_by_name(params[:name])
+
   if @user == nil
   	@errors = true
   	erb :login
@@ -31,5 +31,16 @@ post '/login' do
   else
     @errors = true
     erb :login
+  end
+end
+
+post '/sigunup' do
+  @user = User.create(params[:user])
+  if @user.save
+    session[:user_id] = @user.id
+    redirect '/'
+  else
+    @errors = true
+    erb :register
   end
 end

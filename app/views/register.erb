@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Create Account</h2>
+  <form action='/sigunup' method="POST">
+    <label>Name: </label>
+    <input type="text" name="user[name]">
+    <br>
+    <label>Email: </label>
+    <input type="text" name="user[email]">
+    <br>
+    <label>Password: </label>
+    <input type="password" name="user[password]">
+    <br>
+    <label>Password Confirmation: </label>
+    <input type="password" name="user[password_confirmation]">
+    <input type="submit" value="Sign Up">
+  </form>
+  <%if @errors%>
+      <br>
+      <p class="make_red">Account creation failed</p>
+  <%end%>
+
+</div>
