@@ -2,12 +2,15 @@ class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :name
-      t.string :password_digest
+      # t.string :password_digest
       t.string :email
-      t.string :twitter
-      t.string :cohort
-      t.string :interests
-      t.integer :karma
+      t.string :gravatar
+      # t.string :twitter == > Icebox
+      t.integer :cohort_id
+      # t.string :interests == > Icebox
+      # t.integer :karma == > Icebox
+
+
 
       t.timestamps
     end

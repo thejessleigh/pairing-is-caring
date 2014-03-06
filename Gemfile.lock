@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/Devbootcamp/omniauth-dbc.git
+  revision: 75899feab1e6cdfb3197f57e5139689f1b5b2050
+  specs:
+    omniauth-dbc (1.0.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -25,14 +33,36 @@ GEM
     builder (3.1.4)
     coderay (1.1.0)
     daemons (1.1.9)
+    dbc-ruby (1.0.4)
+      rest-client
     diff-lcs (1.2.5)
     eventmachine (1.0.3)
     faker (1.2.0)
       i18n (~> 0.5)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    hashie (2.0.5)
+    httpauth (0.2.1)
     i18n (0.6.9)
+    jwt (0.1.11)
+      multi_json (>= 1.5)
     method_source (0.8.2)
+    mime-types (2.1)
     minitest (4.7.5)
     multi_json (1.9.0)
+    multipart-post (2.0.0)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.2.1)
+      hashie (>= 1.2, < 3)
+      rack (~> 1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
     pg (0.17.1)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -46,6 +76,8 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.1.1)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -85,7 +117,12 @@ DEPENDENCIES
   activesupport
   bcrypt
   bcrypt-ruby
+  dbc-ruby
   faker
+  oauth2 (~> 0.8.0)
+  omniauth
+  omniauth-dbc!
+  omniauth-oauth2
   pg
   pry
   pry-nav

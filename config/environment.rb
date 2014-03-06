@@ -18,7 +18,7 @@ require 'logger'
 require 'oauth2'
 require 'omniauth'
 require 'omniauth-oauth2'
-require 'oauth-dbc'
+require 'omniauth-dbc'
 
 
 require 'sinatra'
