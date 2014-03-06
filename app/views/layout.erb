@@ -19,7 +19,7 @@
 </head>
   <div id="user">
     <ul>
-      <%if session[:user_id] !=nil%>
+      <% if session[:user_id] %>
        <li><a href="/user/:user_id"><%=User.find(session[:user_id]).name%></a></li>
         <li><a href="/logout">logout</a></li>
       <%else%>
