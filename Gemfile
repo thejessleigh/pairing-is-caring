@@ -18,6 +18,7 @@ gem 'rake'
 gem 'shotgun'
 
 gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 gem 'pry'
 gem 'pry-nav'
