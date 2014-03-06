@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
   has_secure_password
+
+  has_many :appointments, foreign_key :mentor_id
+  has_many :mentees, through: :appointments
+
+  has_many :appointments, foreign_key :mentee_id
+  has many :mentors, through: :appointments
 end
