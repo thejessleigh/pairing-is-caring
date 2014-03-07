@@ -19,7 +19,11 @@ get '/schedule/create' do
   erb :create_appointment
 end
 
-
+get '/schedule/:appointment_id' do
+  @user = User.find(session[:user_id])
+  @appointment = Appointment.find(params[:appointment_id])
+  erb :schedule_session
+end
 
 
 
@@ -28,5 +32,10 @@ end
 
 post '/schedule/create' do
   Appointment.create(start_time: params[:start_time], end_time: params[:end_time], mentor_id: session[:user_id], mentee_id: nil)
+  redirect '/schedule'
+end
+
+post '/schedule/:appointment_id' do
+  Appointment.find(params[:appointment_id]).update(mentee_id: session[:user_id])
   redirect '/schedule'
 end
