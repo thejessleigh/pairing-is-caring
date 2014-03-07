@@ -3,14 +3,21 @@ body {
 }
 
 .container {
+  position:absolute;
+  left:10%;
   margin: 20px auto;
-  width: 720px;
+  width: 75%;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
   background-color:#DDD;
 }
-th {
-  text-align: left;
+
+h1 {
+    text-align:center;
+}
+
+p {
+  padding:5em;
 }
 
 #user ul{
@@ -25,4 +32,8 @@ th {
 #user ul li a{
 	color:black;
 	text-decoration: none;
+}
+
+.gravatar {
+  width:3em;
 }

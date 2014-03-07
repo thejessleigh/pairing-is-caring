@@ -3,7 +3,7 @@
   <div class="appointments">
     <ul>
     <%@appointments.each do |appointment|%>
-      <li><a href="/schedule/view/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=appointment.start_time%> until <%=appointment.end_time%> <%if appointment.mentee%>with <%=appointment.mentee.name%><%end%></li>
+      <li><img src="<%=appointment.mentor.gravatar%>"class="gravatar"><a href="/schedule/view/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=appointment.start_time%> until <%=appointment.end_time%> <%if appointment.mentee%>with <img src="<%=appointment.mentee.gravatar%>"class="gravatar"><%=appointment.mentee.name%><%end%></li>
     <%end%>
     </ul>
   </div>
@@ -11,7 +11,7 @@
    <div class="sessions">
     <ul>
     <%@sessions.each do |session|%>
-      <li><a href="/schedule/view/<%=session.id%>"><%=session.mentor.name%></a> paired <%=session.mentee.name%> at <%=session.start_time%></li>
+      <li><img src="<%=session.mentor.gravatar%>"class="gravatar"><a href="/schedule/view/<%=session.id%>"><%=session.mentor.name%></a> paired with <img src="<%=session.mentee.gravatar%>"class="gravatar"><%=session.mentee.name%> at <%=session.start_time%></li>
     <%end%>
     </ul>
   </div>

@@ -3,6 +3,7 @@
   <%if !session[:user_id]%>
     <p><a href='/signin'>Sign in</a> with Socrates to get in on the menotring fun.</p>
   <%else%>
-    <p><a href='/signout'>Sign Out</a></p>
+  <!-- Icebox - add ajax call so you don't have to navigate away. -->
+    <p><a href='https://auth.devbootcamp.com'>Sign Out</a></p>
   <%end%>
 </div>
