@@ -1,4 +1,4 @@
-<div class="container">
+
   <h2>Do you want to sign up for a mentoring session with <%=@appointment.mentor.name%> from <%=@appointment.start_time%> until <%=@appointment.end_time%>?</h2><br>
 
   <form action='/schedule/<%=@appointment.id%>' method='POST'>
@@ -6,6 +6,3 @@
   </form>
 
   <p><a href='/'>No thanks.</a> Take me back home.</p>
-
-
-</div>

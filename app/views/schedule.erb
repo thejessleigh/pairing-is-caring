@@ -1,10 +1,9 @@
-<div class="container">
   <h1>Sign up to mentor <a href='/schedule/create'>here</a>.</h1>
   <div class="available">
     Available Appointments:
     <ul>
     <%@available_appointments.each do |appointment|%>
-      <li><img src="<%=appointment.mentor.gravatar%>" class="gravatar"><a href="/schedule/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=appointment.start_time%> until <%=appointment.end_time%> <a href="/schedule/cancel/<%=appointment.id%>">cancel</a></li>
+      <li><img src="<%=appointment.mentor.gravatar%>" class="gravatar"><a href="/schedule/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=datetime_format(appointment.start_time)%> until <%=datetime_format(appointment.end_time)%> <a href="/schedule/cancel/<%=appointment.id%>">cancel</a></li>
     <%end%>
     </ul>
   </div>
@@ -17,6 +16,3 @@
     <%end%>
     </ul>
   </div>
-
-
-</div>

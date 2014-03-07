@@ -17,7 +17,8 @@ get '/auth/:provider/callback' do
 end
 
 get '/signout' do
-  session[:user_id] = nil
+  session.clear
+  redirect 'https://auth.devbootcamp.com'
 end
 
 #===============================================Users

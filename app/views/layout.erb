@@ -18,9 +18,23 @@
   <title></title>
 </head>
 <body>
-  <%if session[:user_id]%>
-    <a href='/user'><%=User.find(session[:user_id]).name%></a>
-  <%end%>
+  <nav>
+    <%if session[:user_id]%>
+    <ul>
+      <li><a href='/user'><img src="<%=User.find(session[:user_id]).gravatar%>" class="gravatar"></a></li>
+      <li><a href='/schedule'>See Appointments</a></li>
+      <li><a href='/schedule/create'>Mentor!</a></li>
+      <li><a href='/signout'>Sign Out</a></li>
+    <ul>
+    <%else%>
+    <ul>
+      <li><a href='/signin'>Sign In</a></li>
+      <li><a href='devbootcamp.com'>Dev Bootcamp</a></li>
+    </ul>
+    <%end%>
+  </nav>
+  <div class="container">
   <%= yield %>
+</div>
 </body>
 </html>

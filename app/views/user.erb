@@ -1,20 +1,19 @@
-<div class="container">
-  <h1>Appointments where you acted as a mentor:</h1>
-  <div class="appointments">
+  <h1>Your mentoring history</h1>
+  <div class="available">
+    <h1>Appointments where you acted as a mentor:</h1>
     <ul>
     <%@appointments.each do |appointment|%>
-      <li><img src="<%=appointment.mentor.gravatar%>"class="gravatar"><a href="/schedule/view/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=appointment.start_time%> until <%=appointment.end_time%> <%if appointment.mentee%>with <img src="<%=appointment.mentee.gravatar%>"class="gravatar"><%=appointment.mentee.name%><%end%></li>
+      <li><img src="<%=appointment.mentor.gravatar%>"class="gravatar"><a href="/schedule/view/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=datetime_format(appointment.start_time)%> until <%=datetime_format(appointment.end_time)%> <%if appointment.mentee%>with <img src="<%=appointment.mentee.gravatar%>"class="gravatar"><%=appointment.mentee.name%><%end%></li>
     <%end%>
     </ul>
   </div>
-  <h1>Appointments where you have been mentored:</h1>
-   <div class="sessions">
+
+   <div class="scheduled">
+    <h1>Appointments where you have been mentored:</h1>
     <ul>
     <%@sessions.each do |session|%>
-      <li><img src="<%=session.mentor.gravatar%>"class="gravatar"><a href="/schedule/view/<%=session.id%>"><%=session.mentor.name%></a> paired with <img src="<%=session.mentee.gravatar%>"class="gravatar"><%=session.mentee.name%> at <%=session.start_time%></li>
+      <li><img src="<%=session.mentor.gravatar%>"class="gravatar"><a href="/schedule/view/<%=session.id%>"><%=session.mentor.name%></a> paired with <img src="<%=session.mentee.gravatar%>"class="gravatar"><%=session.mentee.name%> at <%=datetime_format(session.start_time)%></li>
     <%end%>
     </ul>
   </div>
 
-
-</div>
