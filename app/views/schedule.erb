@@ -1,6 +1,22 @@
 <div class="container">
+  Sign up to mentor <a href='/schedule/create'>here</a>.
+  <div class="available">
+    Available Appointments:
+    <ul>
+    <%@available_appointments.each do |appointment|%>
+      <li><a href="/schedule/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=appointment.start_time%> until <%=appointment.end_time%></li>
+    <%end%>
+    </ul>
+  </div>
 
-  <%=@user.name%>
+   <div class="scheduled">
+    Scheduled Appointments:
+    <ul>
+    <%@scheduled_appointments.each do |appointment|%>
+      <li><a href="/schedule/view/<%=appointment.id%>"><%=appointment.mentor.name%> is pairing with <%=appointment.mentee.name%></a></li>
+    <%end%>
+    </ul>
+  </div>
 
 
 </div>
