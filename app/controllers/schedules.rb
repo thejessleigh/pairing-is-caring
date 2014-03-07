@@ -25,7 +25,10 @@ get '/schedule/:appointment_id' do
   erb :schedule_session
 end
 
-
+get '/schedule/cancel/:appointment_id' do
+  @appointment = Appointment.find(params[:appointment_id])
+  erb :cancel
+end
 
 
 #============================================POST
@@ -37,5 +40,10 @@ end
 
 post '/schedule/:appointment_id' do
   Appointment.find(params[:appointment_id]).update(mentee_id: session[:user_id])
+  redirect '/schedule'
+end
+
+post '/schedule/cancel/:appointment_id' do
+  Appointment.find(params[:appointment_id]).destroy
   redirect '/schedule'
 end

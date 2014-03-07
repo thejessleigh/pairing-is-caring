@@ -4,7 +4,7 @@
     Available Appointments:
     <ul>
     <%@available_appointments.each do |appointment|%>
-      <li><a href="/schedule/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=appointment.start_time%> until <%=appointment.end_time%></li>
+      <li><a href="/schedule/<%=appointment.id%>"><%=appointment.mentor.name%></a> at <%=appointment.start_time%> until <%=appointment.end_time%><a href="/schedule/cancel/<%=appointment.id%>">cancel</a></li>
     <%end%>
     </ul>
   </div>
@@ -13,7 +13,7 @@
     Scheduled Appointments:
     <ul>
     <%@scheduled_appointments.each do |appointment|%>
-      <li><a href="/schedule/view/<%=appointment.id%>"><%=appointment.mentor.name%></a> is pairing with <%=appointment.mentee.name%></li>
+      <li><a href="/schedule/view/<%=appointment.id%>"><%=appointment.mentor.name%></a> is pairing with <%=appointment.mentee.name%> <a href="/schedule/cancel/<%=appointment.id%>">cancel</a></li>
     <%end%>
     </ul>
   </div>

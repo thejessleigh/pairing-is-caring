@@ -1,8 +1,13 @@
+body {
+  background-color:#C4AEAD;
+}
+
 .container {
   margin: 20px auto;
   width: 720px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  background-color:#DDD;
 }
 th {
   text-align: left;
