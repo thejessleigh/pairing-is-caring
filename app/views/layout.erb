@@ -18,7 +18,7 @@
   <title></title>
 </head>
 <body>
-  <%=User.find(session[:user_id]).name%>
+  <a href='/user'><%=User.find(session[:user_id]).name%></a>
   <%= yield %>
 </body>
 </html>
