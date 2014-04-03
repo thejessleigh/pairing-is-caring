@@ -19,5 +19,5 @@ at https://github.com/alycit/shoelace.
 Other projects I've worked on include [trUism](https://github.com/devdame/DBC-final-project), [Dev Overflow - RecoMemDo](https://github.com/alexcodreanu86/dev_overflow_dev), and [Survey the Foxes, Uncaged!](https://github.com/nealcpeters/survey_gorilla).
 
 #Suggestions, Comments, etc.
-If you have any suggestions, questions, comments, or just want to say hi, feel free to reach out to me on twitter at @JLUnrein
+If you have any suggestions, questions, comments, or just want to say hi, feel free to reach out to me on twitter at [@JLUnrein](http://twitter.com/JLUnrein)
 
